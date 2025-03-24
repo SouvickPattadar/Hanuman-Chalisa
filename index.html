@@ -18,6 +18,7 @@
     font-size: 20px!important; color : #C70700!important;
   }
  h1{color : #C70700!important;}
+.row{display: flex; justify-content: space-between;}
 </style>
     </head>
     <body cz-shortcut-listen="true">
@@ -148,16 +149,11 @@
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-12 Blog_1st_Container_Row_Col">
                         <div id="right">
-                            <div class="Post_List_Cont">
-  
-    <a href="https://www.hanumangi.com/shri-hanuman-chalisa-lyrics-bengali/#">
-        <div class="Advertisement1 ">
-               hjsjhsfjsdfsf
-        </div>
-    </a>
-</div>
-
-
+                           <section id="quote-button">
+	<div class="quote-btn-desktop">
+		<img src="hanuman-png.png" alt="quote-button" class="img-fluid">
+	</div>
+</section>
 
                  </div>
                     </div>
@@ -170,7 +166,16 @@
 
   
         <!-- Faq End Here -->
-
+<script>
+        // quote button scroll animation
+	var scrollAnimate = parseInt($(".quote-btn-desktop").css('top'));
+	$(window).scroll(function(){
+		var scrollAnimateTop = $(document).scrollTop() + scrollAnimate + "px";
+		$(".quote-btn-desktop").stop(true,false);
+		$(".quote-btn-desktop").animate({top: scrollAnimateTop},1000,"linear"); 
+	});
+	
+</script>
     
 
 </body></html>
